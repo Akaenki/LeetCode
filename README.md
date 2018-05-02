@@ -1,4 +1,4 @@
 # LeetCode 
 A collection of my LeetCode solutions.
 
-Start on May 2nd 2018
+Start on 5/2/2018
