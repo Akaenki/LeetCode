@@ -2,7 +2,9 @@ import java.util.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/** A solution using Map */
+/** A solution using Map 
+ *  This code beats 99% java submission lol
+ */
 public class twoSum {
 	public static int[] twoSum(int[] nums, int target){
 		Map<Integer, Integer> map = new HashMap<>();
