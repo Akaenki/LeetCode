@@ -27,7 +27,7 @@ public class permutationRec {
     }
 
     public static void main(String[] args){
-        int[] nums = new int[]{};
+        int[] nums = new int[]{1,2,3};
         List<List<Integer>> result = permute(nums);
 
         for(int i = 0;i<result.size();i++){
