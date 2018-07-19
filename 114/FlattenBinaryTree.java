@@ -24,7 +24,5 @@ public class FlattenBinaryTree {
         head.left.left = new TreeNode(3);
         head.left.right = new TreeNode(4);
         head.right.right = new TreeNode(6);
-
-        flatten(head);
     }
 }
