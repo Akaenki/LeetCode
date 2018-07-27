@@ -2,6 +2,6 @@
 A collection of my LeetCode problem solutions.
 
 Current Progress: 
-- [ ] Algorithms: 165/819
+- [ ] Algorithms: 229/819
 - [x] Top 100 Liked: 100/100
-- [ ] Top Interview: 98/145
+- [ ] Top Interview: 118/145
