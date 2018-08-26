@@ -13,10 +13,10 @@ public class OpenLock {
     public int openLock(String[] deadends, String target) {
         HashSet<String> set = new HashSet<>();
         for(String str : deadends) set.add(str);
-        PriorityQueue<Solution.LockState> pq = new PriorityQueue<>((a, b)->a.dist-b.dist);
-        pq.offer(new Solution.LockState(target, 0));
+        PriorityQueue<LockState> pq = new PriorityQueue<>((a, b)->a.dist-b.dist);
+        pq.offer(new LockState(target, 0));
         while(!pq.isEmpty()){
-            Solution.LockState ls = pq.poll();
+            LockState ls = pq.poll();
             char[] lock = ls.str.toCharArray();
             for(int i = 0; i<4; ++i){
                 char c = lock[i];
@@ -24,14 +24,14 @@ public class OpenLock {
                 String next = new String(lock);
                 if(!set.contains(next)) {
                     if(next.equals("0000")) return ls.steps+1;
-                    pq.offer(new Solution.LockState(next, ls.steps + 1));
+                    pq.offer(new LockState(next, ls.steps + 1));
                     set.add(next);
                 }
                 lock[i] = (char)(Math.floorMod(c-'0'+1, 10) + '0');
                 next = new String(lock);
                 if(!set.contains(next)) {
                     if (next.equals("0000")) return ls.steps + 1;
-                    pq.offer(new Solution.LockState(next, ls.steps + 1));
+                    pq.offer(new LockState(next, ls.steps + 1));
                     set.add(next);
                 }
                 lock[i] = c;
